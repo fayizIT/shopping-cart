@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "faiz": "nodemon ./bin/www"
+    "fayiz": "nodemon ./bin/www"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
