@@ -19,11 +19,17 @@
         </div>
         <div style="margin-bottom: 15px;">
             <label for="image" style="font-weight: bold;">Image:</label>
-            <img src="/product-images/{{product._id}}.jpg" alt="" style="width:100px; height:auto">
-            <input type="file" id="image" name="Image" style="width: 100%;">
+            <img src="/product-images/{{product._id}}.jpg" alt="" style="width:100px; height:auto" id="imgView" class="pt-3">
+            <input type="file" id="image" name="Image" style="width: 100%;" onchange="viewImage(event)">
         </div>
         <div>
             <input type="submit" value="Submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
         </div>
     </form>
 </section>
+
+<script>
+    function viewImage(event) {
+        document.getElementById('imgView').src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>
